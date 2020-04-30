@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeN\
+V6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container text-center">
+
+<br><br><br>
+<h1 class="display-1">Password Generator</h1>
+<br><br>
+
+
+
+<form  action="{% url 'password' %}">
+
+  <select size="1px" class="btn btn-danger dropdown-toggle"align="left" class="" name="length">
+
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12" selected="selected">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+
+  </select><p size="30px" align="left">Length of your password:</p><br>
+  <br><br>
+  <div class="container text-left">
+    <p>Include:</p><br>
+  <input type="checkbox"  name="uppercase" >Uppercase</input>
+  <br><br>
+  <input type="checkbox" name="number">Number</input>
+  <br><br>
+  <input type="checkbox" name="special">Special Characters</input>
+  <br><br><br>
+  </div>
+
+
+
+  <input align="center" type="submit" name="" value="Generate" class="btn btn-primary"><br>
+
+
+</form>
+<br><br>
+<a class="btn btn-link"href="{% url 'about' %}">About</a>
+</div>
+
+<!-- Material unchecked -->
