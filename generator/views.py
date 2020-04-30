@@ -14,7 +14,7 @@ def password(request):
     if request.GET.get('special'):
         characters.extend(list('!@#$%^&*()_+'))
     thepassword=""
-    length=request.GET.get('length',12)
+    length=request.GET.get('length',11)
     for x in range(int(length)):
         thepassword+=random.choice(characters)
     return(render(request,'generator/password.html',{'password':thepassword}))
